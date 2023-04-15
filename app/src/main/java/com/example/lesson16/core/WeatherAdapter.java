@@ -64,6 +64,9 @@ public class WeatherAdapter extends BaseAdapter {
             constraintLayout.setBackgroundColor(Color.parseColor("#5065BC"));
         }
 
+        /***
+         * push uchun
+         */
         country.setText(data.getNameCountry());
         countryCity.setText(data.getNameCountryCity());
         weather.setText(data.getWeather().toString()+"°");
