@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:background="#9A6666">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="10dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="56dp"
+            android:id="@+id/image_user"
+            android:layout_height="56dp"
+            app:civ_border_color="#DD1313"
+            app:civ_border_width="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:src="@color/purple_500"/>
+        <ImageButton
+            android:id="@+id/button_follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/baseline_add_circle_outline_24"
+            style="?android:attr/borderlessButtonStyle"/>
+        <TextView
+            android:id="@+id/name_user"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            tools:text="Sherzod Ibragimov"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toEndOf="@id/image_user"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/follower_user"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/follower_user"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0 follow"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/image_user"
+            app:layout_constraintTop_toTopOf="@+id/name_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
